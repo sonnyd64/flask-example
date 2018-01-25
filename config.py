@@ -7,16 +7,16 @@ class Config(object):
 	CSRF_ENABLED = True
 	SECRET_KEY = 'mr-belvedere'
 
-class ProductionConfig(config):
+class ProductionConfig(Config):
 	DEBUG = False
 
-class StagingConfig(config):
+class StagingConfig(Config):
 	DEVELOPMENT = True
 	DEBUG = True
 
-class TestingConfig(config):
+class TestingConfig(Config):
 	TESTING = True
 	DEBUG = True
 
-class DevelopmentConfig(config):
+class DevelopmentConfig(Config):
 	TESTING = True
